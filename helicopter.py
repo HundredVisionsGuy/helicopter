@@ -1,5 +1,25 @@
-import pygame
-from pygame.locals import *
+#!/usr/bin/env python
+#
+# Hundred Visions Guy's Helicopter Game
+# A simple helicopter game with physics and possibly AI
+#
+# Released under the GNU General Public License
+
+VERSION = "0.1"
+
+try:
+    import sys
+    import random
+    import math
+    import os
+    import getopt
+    import pygame
+    from engine import *
+    from socket import *
+    from pygame.locals import *
+except ImportError as err:
+    print("couldn't load module. %s" % (err))
+    sys.exit(2)
 # Initialize variables
 stageWidth = 1194
 stageHeight = 600
@@ -32,6 +52,7 @@ def main():
     screen.blit(background, (0,0))
     pygame.display.flip()
 
+    helicopter = engine.load_png("helicopter.png")
     # Game Loop
     done = False
     while not done:
