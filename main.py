@@ -25,17 +25,17 @@ while not done:
 
 # We're done, close window
 pygame.quit()
-### this assures that the size of the screen will always be 400x400 ...
+# this assures that the size of the screen will always be 400x400 ...
 
-##screen.setup(stageWidth, stageHeight)
+screen.setup(stageWidth, stageHeight)
 
-### ... which is the same size as our image
-### now set the background to our space image
-##screen.bgpic("desert.png")
-##
-### Or, set the shape of a turtle
-##screen.addshape("helicopter.gif")
-##turtle.shape("helicopter.gif")
+# ... which is the same size as our image
+# now set the background to our space image
+screen.bgpic("desert.png")
+
+# Or, set the shape of a turtle
+screen.addshape("helicopter.gif")
+turtle.shape("helicopter.gif")
 
 
 
